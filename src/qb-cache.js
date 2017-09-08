@@ -39,28 +39,28 @@ class QBCache {
 	getCacheKey(api, options){
 		const parts = [
 			api,
-			options['dbid'] || 'main'
+			options && options.dbid ? options.dbid : 'main'
 		];
 
 		switch(api){
 			case 'API_DoQuery':
 			case 'API_DoQueryCount':
-				if(options.hasOwnProperty('qid') && options.qid){
+				if(options && options.qid){
 					parts.push(options.qid);
 				}else
-				if(options.hasOwnProperty('query') && options.query){
+				if(options && options.query){
 					parts.push(options.query);
 				}
 
-				if(options.hasOwnProperty('clist') && options.clist){
+				if(options && options.clist){
 					parts.push(options.clist);
 				}
 
-				if(options.hasOwnProperty('slist') && options.slist){
+				if(options && options.slist){
 					parts.push(options.slist);
 				}
 
-				if(options.hasOwnProperty('options') && options.options){
+				if(options && options.options){
 					parts.push(options.options);
 				}
 			break;
@@ -168,7 +168,7 @@ const writeFile = (path, data, options) => {
 			reject(err);
 		});
 
-		stream.on('end', () => {
+		stream.on('close', () => {
 			resolve();
 		});
 
