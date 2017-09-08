@@ -1,0 +1,49 @@
+{
+  "name": "qb-cache",
+  "version": "1.0.0",
+  "description": "A Quick Base cache mechanism",
+  "keywords": [
+    "qb",
+    "quickbase",
+    "quick base",
+    "quick",
+    "base",
+    "cache"
+  ],
+  "homepage": "https://gitlab.datacollaborative.com/products/node-qb-cache",
+  "bugs": {
+    "url": "https://gitlab.datacollaborative.com/products/node-qb-cache/issues",
+    "email": "tflanagan@datacollaborative.com"
+  },
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Tristian Flanagan",
+    "url": "https://github.com/tflanagan",
+    "email": "tflanagan@datacollaborative.com"
+  },
+  "maintainers": [
+    {
+      "name": "Tristian Flanagan",
+      "url": "https://github.com/tflanagan",
+      "email": "tflanagan@datacollaborative.com"
+    }
+  ],
+  "contributors": [
+    "Tristian Flanagan <tflanagan@datacollaborative.com> (https://github.com/tflanagan)"
+  ],
+  "main": "src/gocanvas.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.datacollaborative.com:products/node-qb-cache.git"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "debug": "^3.0.1",
+    "lodash.merge": "^4.6.0",
+    "rfc4122": "^1.0.5"
+  },
+  "engines": {
+    "node": ">=4.0.*"
+  },
+  "git": "git@gitlab.datacollaborative.com:products/node-qb-cache.git"
+}
