@@ -110,7 +110,13 @@ class QBCache {
 				this._cache[key] = cache;
 
 				return resolve(cache.data);
-			}).catch(reject);
+			}).catch((err) => {
+				if(err.code === 'ENOENT'){
+					return resolve(false);
+				}
+
+				reject(err);
+			});
 		});
 	}
 
@@ -131,7 +137,7 @@ class QBCache {
 				this._cache[key] = cache;
 
 				return true;
-			}).catch(reject);
+			}).then(resolve).catch(reject);
 		});
 	}
 
@@ -156,7 +162,7 @@ const writeFile = (path, data, options) => {
 			options = {};
 		}
 
-		const stream = fs.createWriteStram(path);
+		const stream = fs.createWriteStream(path);
 
 		stream.on('error', (err) => {
 			reject(err);
