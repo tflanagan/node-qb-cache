@@ -95,7 +95,7 @@ class QBCache {
 					}).then(resolve).catch(reject);
 				}
 
-				return resolve(cache.data);
+				return resolve(merge({}, cache.data));
 			}
 
 			return fileToBuffer(path).then((buffer) => {
@@ -109,7 +109,7 @@ class QBCache {
 
 				this._cache[key] = cache;
 
-				return resolve(cache.data);
+				return resolve(merge({}, cache.data));
 			}).catch((err) => {
 				if(err.code === 'ENOENT'){
 					return resolve(false);
