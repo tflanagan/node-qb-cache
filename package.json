@@ -1,6 +1,6 @@
 {
   "name": "qb-cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Quick Base cache mechanism",
   "keywords": [
     "qb",
@@ -31,7 +31,7 @@
   "contributors": [
     "Tristian Flanagan <tflanagan@datacollaborative.com> (https://github.com/tflanagan)"
   ],
-  "main": "src/gocanvas.js",
+  "main": "src/qb-cache.js",
   "repository": {
     "type": "git",
     "url": "git@gitlab.datacollaborative.com:products/node-qb-cache.git"
