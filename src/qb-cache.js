@@ -58,30 +58,34 @@ class QBCache {
 	}
 
 	getCacheKey(api, options){
+		if(!options){
+			options = {};
+		}
+
 		const parts = [
 			api,
-			options && options.dbid ? options.dbid : 'main'
+			options.dbid ? options.dbid : 'main'
 		];
 
 		switch(api){
 			case 'API_DoQuery':
 			case 'API_DoQueryCount':
-				if(options && options.qid){
+				if(options.qid){
 					parts.push(options.qid);
 				}else
-				if(options && options.query){
+				if(options.query){
 					parts.push(options.query);
 				}
 
-				if(options && options.clist){
+				if(options.clist){
 					parts.push(options.clist);
 				}
 
-				if(options && options.slist){
+				if(options.slist){
 					parts.push(options.slist);
 				}
 
-				if(options && options.options){
+				if(options.options){
 					parts.push(options.options);
 				}
 			break;
