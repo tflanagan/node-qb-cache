@@ -36,6 +36,27 @@ class QBCache {
 		return this;
 	}
 
+	clearCache(api, options){
+		return new Promise((resolve, reject) => {
+			if(!this.testAllowedAPI(api)){
+				return resolve(false);
+			}
+
+			const key = this.getCacheKey(api, options);
+			const path = join(this.settings.location, key);
+
+			if(this._cache.hasOwnProperty(key)){
+				try {
+					delete this._cache[key];
+				}catch(ignore){}
+			}
+
+			return unlinkAsync(path).then(() => {
+				return false;
+			}).then(resolve).catch(reject);
+		});
+	}
+
 	getCacheKey(api, options){
 		const parts = [
 			api,
@@ -209,6 +230,10 @@ const unlinkAsync = (path) => {
 	return new Promise((resolve, reject) => {
 		fs.unlink(path, (err) => {
 			if(err){
+				if(err.code === 'ENOENT'){
+					return resolve();
+				}
+
 				return reject(err);
 			}
 
