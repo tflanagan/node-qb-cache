@@ -1,6 +1,7 @@
 {
   "name": "qb-cache",
-  "version": "1.1.1",
+  "version": "1.1.2",
+  "private": false,
   "description": "A Quick Base cache mechanism",
   "keywords": [
     "qb",
@@ -10,31 +11,31 @@
     "base",
     "cache"
   ],
-  "homepage": "https://gitlab.datacollaborative.com/products/node-qb-cache",
+  "homepage": "https://github.com/tflanagan/node-qb-cache",
   "bugs": {
-    "url": "https://gitlab.datacollaborative.com/products/node-qb-cache/issues",
-    "email": "tflanagan@datacollaborative.com"
+    "url": "https://github.com/tflanagan/node-qb-cache/issues",
+    "email": "contact@tristianflanagan.com"
   },
   "license": "Apache-2.0",
   "author": {
     "name": "Tristian Flanagan",
     "url": "https://github.com/tflanagan",
-    "email": "tflanagan@datacollaborative.com"
+    "email": "contact@tristianflanagan.com"
   },
   "maintainers": [
     {
       "name": "Tristian Flanagan",
       "url": "https://github.com/tflanagan",
-      "email": "tflanagan@datacollaborative.com"
+      "email": "contact@tristianflanagan.com"
     }
   ],
   "contributors": [
-    "Tristian Flanagan <tflanagan@datacollaborative.com> (https://github.com/tflanagan)"
+    "Tristian Flanagan <contact@tristianflanagan.com> (https://github.com/tflanagan)"
   ],
   "main": "src/qb-cache.js",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.datacollaborative.com:products/node-qb-cache.git"
+    "url": "git@github.com:tflanagan/node-qb-cache.git"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
@@ -45,5 +46,5 @@
   "engines": {
     "node": ">=4.0.*"
   },
-  "git": "git@gitlab.datacollaborative.com:products/node-qb-cache.git"
+  "git": "git@github.com:tflanagan/node-qb-cache.git"
 }
